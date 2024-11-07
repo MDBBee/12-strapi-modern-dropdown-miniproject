@@ -257,3 +257,160 @@ ul {
 PROJECT CSS 
 =============== 
 */
+
+body {
+  background: var(--primary-500);
+}
+
+nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-center {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: none;
+  color: var(--white);
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.toggle-btn {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary-700);
+  border-radius: var(--borderRadius);
+  border-color: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1.5rem;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.hero-container {
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+}
+
+.hero-center {
+  color: white;
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+}
+
+.hero-center h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero-center p {
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 992px) {
+  .hero-center {
+    text-align: center;
+  }
+
+  .hero-center p {
+    max-width: 35em;
+    margin: 0 auto;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--white);
+  /* toggle */
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* toggle class */
+.show-sidebar {
+  opacity: 1;
+  visibility: visible;
+  transition: var(--transition);
+}
+
+.sidebar-container {
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.close-btn {
+  font-size: 2rem;
+  background: transparent;
+  border: transparent;
+  border-radius: var(--borderRadius);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+  color: var(--primary-500);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.close-btn:active {
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar article {
+  margin-bottom: 2rem;
+}
+.sidebar h4 {
+  margin-bottom: 1rem;
+  color: var(--primary-700);
+}
+
+.sidebar-sublinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5rem;
+}
+
+.sidebar-sublinks a {
+  color: var(--grey-900);
+  /* display: block; */
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebar-sublinks svg {
+  color: var(--grey-500);
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+}
