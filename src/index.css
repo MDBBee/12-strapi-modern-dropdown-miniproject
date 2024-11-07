@@ -468,6 +468,7 @@ nav {
     visibility: hidden;
     opacity: 0;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    /* z-index: -1; */
   }
 
   .show-submenu {
@@ -475,6 +476,7 @@ nav {
     opacity: 1;
     transform: rotateX(0deg) translateX(-50%);
     /* transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; */
+    /* z-index: 100; */
   }
 
   .submenu h5 {
